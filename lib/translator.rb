@@ -1,4 +1,5 @@
 class Translator
+  attr_reader :dictionary
 
   def initialize
     @dictionary = {"a" => ".-",
@@ -39,4 +40,22 @@ class Translator
                     "0" => "-----",
                     " " => " "}
   end
+
+  # def eng_to_morse(input)
+  #
+  #   words = word_to_letter(input)
+  #   xxxx = letters_to_code(word)
+  #   yyyy = method(xxxx)
+  #   zzzz = method(yyyy)
+
+  # end
+
+  # def word_to_letter(words)
+  #   words.chars
+  # end
+
+  def letters_to_code('hello world')
+    words.map{|c| dictionary.index c.downcase}.join(' ')
+  end
+
 end
