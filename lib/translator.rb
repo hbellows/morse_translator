@@ -50,7 +50,7 @@ class Translator
 
   # end
 
-  def word_to_letter
+  def word_to_letter(words)
     words.chars
   end
 
