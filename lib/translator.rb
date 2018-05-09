@@ -41,21 +41,22 @@ class Translator
                     " " => " "}
   end
 
-  # def eng_to_morse(input)
-  #
-  #   words = word_to_letter(input)
-  #   xxxx = letters_to_code(word)
-  #   yyyy = method(xxxx)
-  #   zzzz = method(yyyy)
+  def eng_to_morse(input)
 
-  # end
+    words = word_to_letter(input)
+    xxxx = letters_to_code(word)
+    yyyy = method(xxxx)
+    zzzz = method(yyyy)
 
-  def word_to_letter(words)
-    words.chars
   end
 
-  def letters_to_code
+  def word_to_letter(input)
+    input.chars
+  end
+
+  def letters_to_code(words)
     words.map do |letter|
+      letter.to_s
       if letter == "h"
         letter.replace "...."
       end

@@ -15,14 +15,14 @@ class TranslatorTest < Minitest::Test
     words = "hello world"
     split_words = ["h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"]
 
-    assert_equal split_words, translator.word_to_letter(word)
+    assert_equal split_words, translator.word_to_letter(words)
   end
 
   def test_it_can_make_h
     translator = Translator.new
     word = "h"
 
-    assert_equal word, translator.letters_to_code
+    assert_equal word, translator.letters_to_code(word)
   end
 
 
