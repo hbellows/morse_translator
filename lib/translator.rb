@@ -50,12 +50,23 @@ class Translator
 
   # end
 
-  # def word_to_letter(words)
-  #   words.chars
-  # end
-
-  def letters_to_code('hello world')
-    words.map{|c| dictionary.index c.downcase}.join(' ')
+  def word_to_letter
+    words.chars
   end
+
+  def letters_to_code
+    words.map do |letter|
+      if letter == "h"
+        letter.replace "...."
+      end
+    end
+  end
+
+  # def letters_to_code(e)
+  #   words.map do |letter|
+  #     if letter == "e"
+  #       letter.replace "...."
+  #   end
+  # end
 
 end
